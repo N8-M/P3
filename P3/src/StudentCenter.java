@@ -1,3 +1,57 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Title:            P3
+// Files:            Course.java
+//		     PriorityQueue.java
+//		     PriorityQueueItem.java
+//		     Queue.java
+//		     QueueADT.java
+//		     Student.java
+//		     StudentCenter.java
+//		     EmptyQueueException.java
+//		     PriorityQueueIterator.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Neight Mindham
+// Email:            Nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+
+// Pair Partner:     Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Title:            P3
+// Files:            Course.java
+//		     PriorityQueue.java
+//		     PriorityQueueItem.java
+//		     Queue.java
+//		     QueueADT.java
+//		     Student.java
+//		     StudentCenter.java
+//		     EmptyQueueException.java
+//		     PriorityQueueIterator.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+
+// Pair Partner:     Luke Van Hulle
+// Email:            nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
