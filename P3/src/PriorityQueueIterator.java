@@ -1,3 +1,46 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Main Class File:  StudentCenter.java
+// File:             PriorityQueueIterator.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Neight Mindham
+// Email:            Nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+
+// Pair Partner:     Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Main Class File:  StudentCenter.java
+// File:             PriorityQueueIterator.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+ 
+// Pair Partner:     Neight Mindham
+// Email:            nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Creates an iterator to traverse throught the Priority Queue
+ *
+ * @author "the" Luke Van Hulle and "the" Neight Mindham
+ */
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -29,7 +72,7 @@ public class PriorityQueueIterator<T> implements Iterator<PriorityQueueItem<T>>
 	public boolean hasNext()
 		{
 		// TODO
-		
+		// returns truth value of if priorityQueue is not empty
 		return !priorityQueue.isEmpty();
 		}
 
@@ -45,9 +88,11 @@ public class PriorityQueueIterator<T> implements Iterator<PriorityQueueItem<T>>
 	public PriorityQueueItem<T> next()
 		{
 		// TODO
+		// Throws exception if iteration has no more elements
 		if(!hasNext()){
 			throw new NoSuchElementException();
 		}
+		// returns the top element in the queue
 		return priorityQueue.dequeue();
 		}
 
