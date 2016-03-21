@@ -1,3 +1,42 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Main Class File:  PriorityQueueItem.java
+// File:             Course.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Neight Mindham
+// Email:            Nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+
+// Pair Partner:     Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Main Class File:  StudentCenter.java
+// File:             PriorityQueueItem.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+ 
+// Pair Partner:     Neight Mindham
+// Email:            nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
+
 /**
  * 
  * Class to represent object stored at every entry in the PriorityQueue. ie, The
@@ -10,22 +49,33 @@
  */
 public class PriorityQueueItem<E> implements Comparable<PriorityQueueItem<E>>
 {
-
+	
+	// field variables
 	private int priority;
 	private Queue<E> queue;
-
+	
+	// initiates fields
 	public PriorityQueueItem(int priority)
 	{
 		this.priority = priority;
 		queue = new Queue<E>();
 	}
 
+	/**
+ 	* Gets the Priority and returns it
+ 	* @return priority
+ 	*/
 	public int getPriority()
 	{
 		// TODO
 		return priority;
 	}
 
+	/**
+ 	* Gets the Queue list
+ 	*
+ 	* @return queue
+ 	*/
 	public Queue<E> getList()
 	{
 		// TODO
@@ -55,12 +105,17 @@ public class PriorityQueueItem<E> implements Comparable<PriorityQueueItem<E>>
 	public int compareTo(PriorityQueueItem<E> o)
 	{
 		// TODO
+		// checks to see if priority is greater than o's priority.
+		// if so returns positive
 		if(priority > o.getPriority()){
 			return 1;
 		}
+		// checks to see if priority is less than o's priority.
+		// if so returns negative
 		if(priority < o.getPriority()){
 			return -1; 
 		}
+		// returns zero if equal
 		return 0; 
 	}
 }
