@@ -1,3 +1,42 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Main Class File:  Queue.java
+// File:             Course.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Neight Mindham
+// Email:            Nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+
+// Pair Partner:     Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Main Class File:  StudentCenter.java
+// File:             Queue.java
+// Semester:         CS 367 Spring 2016
+//
+// Author:           Luke Van Hulle
+// Email:            lvanhulle@wisc.edu
+// CS Login:         van-hulle
+// Lecturer's Name:  Deb Deppeler
+//
+//////////////////// PAIR PROGRAMMERS COMPLETE THIS SECTION ////////////////////
+ 
+// Pair Partner:     Neight Mindham
+// Email:            nmindham@wisc.edu
+// CS Login:         Neight
+// Lecturer's Name:  Deb Deppeler	
+////////////////////////////////////////////////////////////////////////////////
+
+
 /**
  * An ordered collection of items, where items are added to the rear and removed
  * from the front.
@@ -9,10 +48,12 @@ public class Queue<E> implements QueueADT<E>
 	// You may use a naive expandable circular array or a chain of listnodes.
 	// You may NOT use Java's predefined classes such as ArrayList or
 	// LinkedList.
+	// fields for linknodes
 	private Listnode<E> head;
 	private Listnode<E> tail;
 	private int size;
 
+	// constructors for the fields
 	public Queue(){
 		head = new Listnode<E>(null);
 		tail = head;
@@ -29,10 +70,15 @@ public class Queue<E> implements QueueADT<E>
 	 */
 	public void enqueue(E item)
 	{
+		// checks if item is null and throws exception if so
 		if(item == null){
 			throw new IllegalArgumentException();
 		}
+		
+		// creates temp variable to hold item
 		Listnode<E> temp = new Listnode<E>(item);
+		
+		// adds the temp variable and sets tail equal to it the increments size. 
 		tail.setNext(temp);
 		tail = temp;
 		size++;
@@ -46,11 +92,15 @@ public class Queue<E> implements QueueADT<E>
 	 *             if the queue is empty.
 	 */
 	public E dequeue()
-	{
+	{	
+		// checks if size is zero. if so throw exception 
 		if(size == 0){
 			throw new EmptyQueueException();
 		}
+		// creates temp variable to heads next item
 		Listnode<E> temp = head.getNext();
+		
+		// removes node and decrements size then returns the item removed
 		head.setNext(temp.getNext());
 		size--;
 		return temp.getData();
@@ -65,9 +115,11 @@ public class Queue<E> implements QueueADT<E>
 	 */
 	public E peek()
 	{
+		// checks to see if size is zero. if so throws exception. 
 		if(size == 0){
 			throw new EmptyQueueException();
 		}
+		// returns the top item without removing it. 
 		return head.getNext().getData();
 	}
 
@@ -78,6 +130,7 @@ public class Queue<E> implements QueueADT<E>
 	 */
 	public boolean isEmpty()
 	{
+		// returns truth value of size == 0
 		return size == 0;
 	}
 
@@ -86,8 +139,10 @@ public class Queue<E> implements QueueADT<E>
 	 */
 	public void clear()
 	{
+		// removes all items and creates a new one of size 0. 
 		tail = new Listnode<E>(null);
 		head.setNext(tail);
+		size = 0; 
 	}
 
 	/**
@@ -97,9 +152,14 @@ public class Queue<E> implements QueueADT<E>
 	 */
 	public int size()
 	{
+		// returns the size 
 		return size;
 	}
-
+	
+	/**
+	 * this method is not needed
+	 * /
+	 * 
 	private void expandCapacity()
 	{
 		//expanding should be done using the naive copy-all-elements approach
